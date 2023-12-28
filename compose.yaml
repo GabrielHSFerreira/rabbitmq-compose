@@ -1,0 +1,12 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: rabbitmq-1
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - rabbitmq-volume:/var/lib/rabbitmq
+
+volumes:
+  rabbitmq-volume:
